@@ -12,12 +12,14 @@ cocos2d-xをはじめるために、C++の基本っぽいことをメモ
 ```
 
 ## 基本的な型
-bool        | true(0以外) | false(0)
+型          | 説明
+----------- | ---------------------
+bool        | true / false
 char        | 文字列
 int         | 整数型
 float       | 浮動小数点型
 double      | 倍精度浮動小数点型
-void        | 空データの型
+void        | 空データ
 
 ## クラス
 ``` cpp
@@ -37,7 +39,7 @@ public:
 
 // クラスの中身 ----------------------------------
 // コンストラクタの中身
-Dog::Dog(string s) : name(s), age(){}
+Dog::Dog(string s) : name(s){}
 
 // メソッドの中身
 void Dog::speak() const{
