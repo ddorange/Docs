@@ -22,36 +22,49 @@ double      | 倍精度浮動小数点型
 void        | 空データ
 
 ## クラス
+### sample.h
 ``` cpp
-// クラスの定義 ----------------------------------
 class Dog
 {
 // プライベート変数
 private:
     string name;
-    int age;
 
 // パブリック変数
 public:
-    Dog(string);      // コンストラクタの定義
-    void speak() const; // メソッドの定義
+    // コンストラクタ
+    Dog(string);
+    
+    // デストラクタ
+    ~Dog();
+    
+    // メソッド
+    void speak() const;
 };
+```
 
-// クラスの中身 ----------------------------------
-// コンストラクタの中身
+### sample.cpp
+``` cpp
+// コンストラクタ
 Dog::Dog(string s) : name(s){}
+
+// デストラクタ
+Dog::~Dog()
+{
+  // body...
+}
 
 // メソッドの中身
 void Dog::speak() const{
     cout<<"私の名前は"<<name<<"です。"<<endl;
 }
+```
 
-// 実行
-int main(){
-    // インスタンスを生成
-    Dog dog_01("ポチ");
+### 実行とか
+``` cpp
+// インスタンスを生成
+Dog dog_01("ポチ");
 
-    // speakメソッドを実行
-    dog_01.speak();
-}
+// speakメソッドを実行
+dog_01.speak();
 ```
