@@ -5,7 +5,7 @@ cocos2d-xをはじめるために、C++の基本っぽいことをメモ
 - http://www.asahi-net.or.jp/~yf8k-kbys/newcpp0.html
 
 ## 変数
-`型　+ 変数名;`で宣言する
+`型 + 変数名;`で宣言する
 ``` cpp
     int num;
     string name = "hoge";
@@ -46,7 +46,10 @@ public:
 ### sample.cpp
 ``` cpp
 // コンストラクタ
-Dog::Dog(string s) : name(s){}
+Dog::Dog(string s) : name(s)
+{
+  // body...
+}
 
 // デストラクタ
 Dog::~Dog()
@@ -55,7 +58,8 @@ Dog::~Dog()
 }
 
 // メソッドの中身
-void Dog::speak() const{
+void Dog::speak() const
+{
     cout<<"私の名前は"<<name<<"です。"<<endl;
 }
 ```
